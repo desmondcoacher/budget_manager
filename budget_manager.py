@@ -44,6 +44,6 @@ while True: # Loop Menu Start
 
         case _: # In case that the user's choosen option is not exists
             print("Error: Incorrect menu option has been choosen. Please try again.")   # Print error message in case that incorrect menu option has choosen
-        # Menu Options End
+    # Menu Options End
     input("Press Enter to return to the Main Menu.")    # Prompt the input message each time into the loop for returning to Main Menu
 # Loop Menu End
