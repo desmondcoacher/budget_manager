@@ -33,7 +33,7 @@ while True: # Loop Menu Start
             print("Menu option 3 has been choosen.")
             # pass
             transactions.show_balance()   # Calling defined function from transactions imported module
-            print(f"ℹ️  Info: Your current balance: {userBalance} ₪.\n")
+            print(f"ℹ️  Info: Your current balance - {userBalance} ₪.\n")
 
         case "4":   # Show Transaction History
             print("Menu option 4 has been choosen.")
@@ -45,7 +45,7 @@ while True: # Loop Menu Start
             break # Breaking the loop (quit)
 
         case _: # In case that the user's choosen option is not exists
-            print("Error: Incorrect menu option has been choosen. Please try again.")   # Print error message in case that incorrect menu option has choosen
+            print("❌ Error: Incorrect menu option has been choosen.\n")   # Print error message in case that incorrect menu option has choosen
     # Menu Options End
     input("Press Enter to return to the Main Menu.")    # Prompt the input message each time into the loop for returning to Main Menu
 # Loop Menu End
