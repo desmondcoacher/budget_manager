@@ -34,7 +34,7 @@ while True: # Loop Menu Start
             print("Menu option 3 has been choosen.")
             # pass
             transactions.show_balance()   # Calling defined function from transactions imported module
-            print(f"Your current balance: {userBalance} NIS.")
+            print(f"ℹ️  Info: Your current balance: {userBalance} ₪.")
 
         case "4":   # Show Transaction History
             print("Menu option 4 has been choosen.")
