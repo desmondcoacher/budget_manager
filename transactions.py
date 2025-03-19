@@ -16,7 +16,6 @@ def user_balance():
     generated_balance = random.randint(100,1000)
     return(generated_balance)
 
-
 def menu_handler(): # Main Menu Handler
     print("\n" + "*" * 25)
     print("Welcome to Budget Manager")
