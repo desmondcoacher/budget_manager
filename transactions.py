@@ -8,9 +8,10 @@
 #  ]
 # }
 
+import random
+
 budget_data = {}    # Creating new empty dictionary for all transactions
 
-import random
 def user_balance():
     generated_balance = random.randint(100,1000)
     return(generated_balance)

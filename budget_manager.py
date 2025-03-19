@@ -9,7 +9,7 @@
 import transactions  # Importing functions module
 
 budget_data = {}    # Creating new empty dictionary for all transactions
-userBalance = transactions.user_balance()   # Overriting user's balance for a main file from transactions function (def user_balance())
+userBalance = transactions.user_balance()   # Overriting user's balance for a main file from transactions function (def user_balance()) - This is starting balance
 
 while True: # Loop Menu Start
 
