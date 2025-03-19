@@ -7,16 +7,15 @@
 # }
 
 import transactions  # Importing functions module
-import random
 
-userBalance = random.randint(100,1000)
 budget_data = {}    # Creating new empty dictionary for all transactions
+userBalance = transactions.user_balance()   # Overriting user's balance for a main file from transactions function (def user_balance())
 
 while True: # Loop Menu Start
 
     transactions.menu_handler() # Calling defined function from transactions imported module (Menu Handler)
     
-    userChoise = input("\nEnter menu option: ") # # Asking the user to make a choise
+    userChoise = input("\nEnter menu option: ") # Asking the user to make a choise
 
     match userChoise:   # Menu Options Start
 
@@ -34,7 +33,7 @@ while True: # Loop Menu Start
             print("Menu option 3 has been choosen.")
             # pass
             transactions.show_balance()   # Calling defined function from transactions imported module
-            print(f"ℹ️  Info: Your current balance: {userBalance} ₪.")
+            print(f"ℹ️  Info: Your current balance: {userBalance} ₪.\n")
 
         case "4":   # Show Transaction History
             print("Menu option 4 has been choosen.")
