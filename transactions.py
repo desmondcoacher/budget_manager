@@ -8,8 +8,6 @@
 #  ]
 # }
 
-# import transactions  # Importing functions module
-
 budget_data = {}    # Creating new empty dictionary for all transactions
 
 def menu_handler(): # Main Menu Handler

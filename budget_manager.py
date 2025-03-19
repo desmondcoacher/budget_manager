@@ -7,7 +7,9 @@
 # }
 
 import transactions  # Importing functions module
+import random
 
+userBalance = random.randint(100,1000)
 budget_data = {}    # Creating new empty dictionary for all transactions
 
 while True: # Loop Menu Start
@@ -32,12 +34,13 @@ while True: # Loop Menu Start
             print("Menu option 3 has been choosen.")
             # pass
             transactions.show_balance()   # Calling defined function from transactions imported module
+            print(f"Your current balance: {userBalance} NIS.")
 
         case "4":   # Show Transaction History
             print("Menu option 4 has been choosen.")
-            # pass
+            # # pass
             transactions.show_transaction_history()   # Calling defined function from transactions imported module
-
+            
         case "5":   # Exit
             print("Thank you for using our service. See you later!\n")   # Print goodbye message before quit
             break # Breaking the loop (quit)
