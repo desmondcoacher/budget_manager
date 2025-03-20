@@ -15,10 +15,11 @@ Manage your budget easily by adding income/expense transactions.
 - "Easy-to-understand" code (comments everywhere)
 
 
-## Good to Know
+## Code Explainations
+### Structure Method Used
 
-The method used in the code:
-```
+The method used in the code below creating a dictionary with a transactions list, including starting balance, transaction type, amount and description:
+```python
 budget_data = {
 "balance": 500,
 "transactions": [
@@ -27,13 +28,25 @@ budget_data = {
 ]
 }
 ```
+Each transaction will be stored separately in a new line *(see example below)*:
+
+```{"type": "expense", "amount": 500, "description": "Groceries"}```
+
+The user's balance value will be overrited in the main ```budget_manager.py``` file after each transaction.
+
+### Main Menu
+The menu contains loop with match-cases, the user will be asked to press **Enter** in order to return to the menu again after the function completion.
+
+In case the user's input is incorrect or not exists in the menu - error message will be printed.
+### Functions File
+There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
 
 
-## Documentation
+## Files Included
 
-[Main File](https://github.com/desmondcoacher/budget_manager/blob/main/budget_manager.py)
+[```budget_manager.py```](https://github.com/desmondcoacher/budget_manager/blob/main/budget_manager.py) *(Main File)*
 
-[Functions File](https://github.com/desmondcoacher/budget_manager/blob/main/transactions.py)
+[```transactions.py```](https://github.com/desmondcoacher/budget_manager/blob/main/transactions.py) *(Functions File)*
 
 
 ## Licensing
