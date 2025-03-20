@@ -42,7 +42,7 @@ In case the user's input is incorrect or not exists in the menu - error message 
 There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
 
 
-## Files
+## Files Included
 
 [```budget_manager.py```](https://github.com/desmondcoacher/budget_manager/blob/main/budget_manager.py) *(Main File)*
 
