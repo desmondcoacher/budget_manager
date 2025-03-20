@@ -28,10 +28,8 @@ budget_data = {
 ]
 }
 ```
-Each transaction will be stored separately in a new line *(see example below)*:
-
-```{"type": "expense", "amount": 500, "description": "Groceries"}```
-
+Each transaction will be stored separately in a new line *(see example below)*:<br>
+```{"type": "expense", "amount": 500, "description": "Groceries"}```<br><br>
 The user's balance value will be overrited in the main ```budget_manager.py``` file after each transaction.
 
 ### Main Menu
@@ -41,8 +39,8 @@ The menu contains loop with match-cases, the user will be asked to press **Enter
 **2.** Add Expense<br>
 **3.** Show Balance<br>
 **4.** Show Transaction History<br>
-**5.** Exit<br>
-Enter menu option:<br>
+**5.** Exit<br><br>
+Enter menu option:<br><br>
 In case the user's input is incorrect or not exists in the menu - error message will be printed.
 ### Functions File
 There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
