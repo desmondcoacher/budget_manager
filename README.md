@@ -37,6 +37,14 @@ The user's balance value will be overrited in the main ```budget_manager.py``` f
 ### Main Menu
 The menu contains loop with match-cases, the user will be asked to press **Enter** in order to return to the menu again after the function completion.
 
+**1.** Add Income
+**2.** Add Expense
+**3.** Show Balance
+**4.** Show Transaction History
+**5.** Exit
+
+Enter menu option:
+
 In case the user's input is incorrect or not exists in the menu - error message will be printed.
 ### Functions File
 There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
