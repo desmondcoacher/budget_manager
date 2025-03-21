@@ -23,6 +23,10 @@ def show_balance(balance): # Show Balance Menu Option
     print(f"ℹ️  Info: Your current balance - {balance} ₪.\n")    # Printing message to user with the current balance
     pass    # For test purposes
 
-def show_transaction_history(type, amount, description): # Show Transaction History Menu Option
-    print("Show Transaction History option has been choosen.")    # For test purposes
-    pass    # For test purposes
+def show_transaction_history(transactions_database: list): # Show Transaction History Menu Option
+    counter: int = 1
+    for transaction in transactions_database:
+        print(f"{counter} - {transaction}")
+    
+    return transactions_database
+    
