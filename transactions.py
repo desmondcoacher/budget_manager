@@ -21,9 +21,31 @@ def menu_handler(): # Main Menu Handler
     print("4. Show Transaction History")
     print("5. Exit")
 
-def add_income(amount, description):   # Add Income Menu Option
-    print("Add Income option has been choosen.")    # For test purposes
-    pass    # For test purposes
+def add_income(budget_data: dict) -> dict:
+    """
+    Adds an income transaction to the budget_data dictionary.
+    Updates balance and appends to transactions list.
+    """
+    try:
+        amount = float(input("Enter income amount: "))
+        description = input("Enter income description: ")
+
+        # Update balance
+        budget_data["balance"] += amount
+
+        # Add transaction
+        budget_data["transactions"].append({
+            "type": "income",
+            "amount": amount,
+            "description": description
+        })
+
+        print(f"✅ Income of {amount} added successfully!")
+
+    except ValueError:
+        print("❌ Invalid amount. Please enter a number.")
+
+    return budget_data
 
 def add_expense(amount, description):  # Add Expense Menu Option
     print("Add Expense option has been choosen.")    # For test purposes
