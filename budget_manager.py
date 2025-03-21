@@ -2,10 +2,10 @@ import transactions  # Importing functions module
 
 # Creating new empty dictionary for all transactions
 transactions_database = [
- ()
-]
-# balance = sum(item[1] if item[0] == "income" else -item[1] for item in transactions)    
-balance = 0 # Creating user balance value with starting 0 ₪ on balance
+budget_data = {
+    "balance": 0,
+    "transactions": []
+}
 
 while True: # Loop Menu Start
 
@@ -15,8 +15,8 @@ while True: # Loop Menu Start
     match userChoise:   # Menu Options Start
 
         case "1":   # Add Income
-            # transactions.add_income(amount, description)   # Calling defined function from transactions imported module
-            pass
+            budget_data = transactions.add_income(budget_data)
+
 
         case "2":   # Add Expense
             # transactions.add_expense(amount, description)   # Calling defined function from transactions imported module
