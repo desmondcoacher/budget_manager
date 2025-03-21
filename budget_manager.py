@@ -1,6 +1,10 @@
 import transactions  # Importing functions module
 
-budget_data = {}    # Creating new empty dictionary for all transactions
+# Creating new empty dictionary for all transactions
+transactions_database = [
+ ()
+]
+# balance = sum(item[1] if item[0] == "income" else -item[1] for item in transactions)    
 balance = 0 # Creating user balance value with starting 0 ₪ on balance
 
 while True: # Loop Menu Start
@@ -24,7 +28,7 @@ while True: # Loop Menu Start
 
         case "4":   # Show Transaction History
             # transactions.show_transaction_history(type, amount, description)   # Calling defined function from transactions imported module
-            pass
+            transactions.show_transaction_history(transactions_database)
             
         case "5":   # Exit
             print("Thank you for using our service. See you later!\n")   # Print goodbye message before quit
