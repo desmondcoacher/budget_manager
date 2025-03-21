@@ -1,11 +1,7 @@
 import transactions  # Importing functions module
 
 # Creating new empty dictionary for all transactions
-transactions_database = [
-budget_data = {
-    "balance": 0,
-    "transactions": []
-}
+transactions_database = []
 
 while True: # Loop Menu Start
 
@@ -15,7 +11,7 @@ while True: # Loop Menu Start
     match userChoise:   # Menu Options Start
 
         case "1":   # Add Income
-            budget_data = transactions.add_income(budget_data)
+            transactions.add_income(transactions_database)
 
 
         case "2":   # Add Expense
@@ -23,11 +19,10 @@ while True: # Loop Menu Start
             pass
 
         case "3":   # Show Balance
-            # transactions.show_balance(balance)   # Calling defined function from transactions imported module
+            transactions.show_balance(transactions_database)   # Calling defined function from transactions imported module
             pass
 
         case "4":   # Show Transaction History
-            # transactions.show_transaction_history(type, amount, description)   # Calling defined function from transactions imported module
             transactions.show_transaction_history(transactions_database)
             
         case "5":   # Exit

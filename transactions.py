@@ -11,9 +11,9 @@ def menu_handler(): # Main Menu Handler
     print("4. Show Transaction History")
     print("5. Exit")
 
-def add_income(budget_data: dict) -> dict:
+def add_income(transactions_database: dict) -> dict:
     """
-    Adds an income transaction to the budget_data dictionary.
+    Adds an income transaction to the transactions_database dictionary.
     Updates balance and appends to transactions list.
     """
     try:
@@ -21,10 +21,10 @@ def add_income(budget_data: dict) -> dict:
         description = input("Enter income description: ")
 
         # Update balance
-        budget_data["balance"] += amount
+        transactions_database["balance"] += amount
 
         # Add transaction
-        budget_data["transactions"].append({
+        transactions_database["transactions"].append({
             "type": "income",
             "amount": amount,
             "description": description
@@ -35,18 +35,20 @@ def add_income(budget_data: dict) -> dict:
     except ValueError:
         print("❌ Invalid amount. Please enter a number.")
 
-    return budget_data
+    return transactions_database
 
-def add_expense(amount, description):  # Add Expense Menu Option
+def add_expense(transactions_database):  # Add Expense Menu Option
     print("Add Expense option has been choosen.")    # For test purposes
     pass    # For test purposes
 
-def show_balance(balance): # Show Balance Menu Option
-    print(f"ℹ️  Info: Your current balance - {balance} ₪.\n")    # Printing message to user with the current balance
+def show_balance(transactions_database): # Show Balance Menu Option
+    print(f"ℹ️  Info: Your current balance - {transactions_database["balance"]} ₪.\n")    # Printing message to user with the current balance
     pass    # For test purposes
 
 def show_transaction_history(transactions_database: list): # Show Transaction History Menu Option
     counter: int = 1
+    if not transactions_database:
+        print("\nError: There are no transactions exists in the database.")
     for transaction in transactions_database:
         print(f"{counter} - {transaction}")
     
