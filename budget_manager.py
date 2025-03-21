@@ -1,6 +1,10 @@
 import transactions  # Importing functions module
 
-budget_data = {}    # Creating new empty dictionary for all transactions
+# Creating new empty dictionary for all transactions
+transactions = [
+ ()
+]
+# balance = sum(item[1] if item[0] == "income" else -item[1] for item in transactions)    
 balance = 0 # Creating user balance value with starting 0 ₪ on balance
 
 while True: # Loop Menu Start

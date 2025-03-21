@@ -1,15 +1,5 @@
 # This is a transactions functions file which will be used in main file
 
-budget_data = {
- "balance": 500,
- "transactions": [
- {"type": "income", "amount": 1000, "description": "Salary"},
- {"type": "expense", "amount": 500, "description": "Groceries"}
- ]
-}
-
-# budget_data = {}    # Creating new empty dictionary for all transactions
-
 def menu_handler(): # Main Menu Handler
     print("\n" + "*" * 25)
     print("Welcome to Budget Manager")
