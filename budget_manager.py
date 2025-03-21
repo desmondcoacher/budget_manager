@@ -1,7 +1,7 @@
 import transactions  # Importing functions module
 
 # Creating new empty dictionary for all transactions
-transactions_database = []
+transactions_database = {"balance": 0, "transactions": []} # Setting starting zero balance and empty transactions
 
 while True: # Loop Menu Start
 
@@ -14,9 +14,9 @@ while True: # Loop Menu Start
             transactions.add_income(transactions_database)
 
 
-        case "2":   # Add Expense
-            # transactions.add_expense(amount, description)   # Calling defined function from transactions imported module
-            pass
+        # case "2":   # Add Expense
+        # transactions.add_expense(amount, description)   # Calling defined function from transactions imported module
+        #     pass
 
         case "3":   # Show Balance
             transactions.show_balance(transactions_database)   # Calling defined function from transactions imported module

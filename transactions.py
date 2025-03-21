@@ -17,7 +17,7 @@ def add_income(transactions_database: dict) -> dict:
     Updates balance and appends to transactions list.
     """
     try:
-        amount = float(input("Enter income amount: "))
+        amount = int(input("Enter income amount: "))
         description = input("Enter income description: ")
 
         # Update balance
@@ -30,16 +30,16 @@ def add_income(transactions_database: dict) -> dict:
             "description": description
         })
 
-        print(f"✅ Income of {amount} added successfully!")
+        print(f"✅ Success: {amount} ₪ for {description} in income transaction type added successfully!")
 
     except ValueError:
         print("❌ Invalid amount. Please enter a number.")
 
     return transactions_database
 
-def add_expense(transactions_database):  # Add Expense Menu Option
-    print("Add Expense option has been choosen.")    # For test purposes
-    pass    # For test purposes
+# def add_expense(transactions_database):  # Add Expense Menu Option
+#     print("Add Expense option has been choosen.")    # For test purposes
+#     pass    # For test purposes
 
 def show_balance(transactions_database): # Show Balance Menu Option
     print(f"ℹ️  Info: Your current balance - {transactions_database["balance"]} ₪.\n")    # Printing message to user with the current balance
@@ -47,10 +47,14 @@ def show_balance(transactions_database): # Show Balance Menu Option
 
 def show_transaction_history(transactions_database: list): # Show Transaction History Menu Option
     counter: int = 1
-    if not transactions_database:
-        print("\nError: There are no transactions exists in the database.")
-    for transaction in transactions_database:
-        print(f"{counter} - {transaction}")
+    if not transactions_database["transactions"]:
+        print("\nℹ️  Info: There are no transactions exists in the database.\n")
+    else:
+        print("\nTransaction List:\n")
+        for transaction in transactions_database["transactions"]:
+            print(f"#{counter} | Type: {transaction["type"].capitalize()} | Amount: {transaction["amount"]} ₪ | Desctiption: {transaction["description"]}")
+            counter += 1
+        print("")
     
     return transactions_database
     
