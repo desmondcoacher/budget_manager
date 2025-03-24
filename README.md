@@ -23,6 +23,7 @@ The program maintains a dictionary that stores the user's balance and a list of 
 transactions_database = {"balance": 0, "transactions": []}
 ```
 Each transaction will be stored separately in a new line *(see example below)*:<br>
+
 ```{"type": "expense", "amount": 500, "description": "Groceries"}```<br><br>
 The user's balance value will be overrited in the main ```budget_manager.py``` file after each transaction.
 
