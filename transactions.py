@@ -70,12 +70,12 @@ def show_transaction_history(transactions_database: list): # Show Transaction Hi
     else:
         print("\nTransaction List:\n")
         for transaction in transactions_database["transactions"]:
-            if transaction["type"] == "income":
-                print(f"#{counter} | ⬆️  Type: {transaction["type"].capitalize()} | Amount: {transaction["amount"]} ₪ | Desctiption: {transaction["description"]}")
+            if transaction["type"] == "income": # Print transactions list loop based on the transaction type (income/expense)
+                print(f"#{counter} | ⬆️  Type: {transaction["type"].capitalize()} | Amount: {transaction["amount"]} ₪ | Desctiption: {transaction["description"]}")  # For Income Transactions
             else:
-                print(f"#{counter} | ⬇️  Type: {transaction["type"].capitalize()} | Amount: {transaction["amount"]} ₪ | Desctiption: {transaction["description"]}")
-            counter += 1
-        print("")
+                print(f"#{counter} | ⬇️  Type: {transaction["type"].capitalize()} | Amount: {transaction["amount"]} ₪ | Desctiption: {transaction["description"]}")  # For Expense Transactions
+            counter += 1    # Counter updating after each print line
+        print("")   # Printing empty line
     
     return transactions_database
     
