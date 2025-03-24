@@ -9,31 +9,25 @@ Manage your budget easily by adding income/expense transactions.
 
 ## Features
 
-- Transactions control (incomes/expenses)
-- Current Balance visibility
-- Transactions history
-- "Easy-to-understand" code (comments everywhere)
+-Track income and expenses effortlessly
+-View real-time balance updates
+-Maintain a transaction history
+-Simple and well-commented code for easy understanding
 
 
-## Code Explainations
-### Structure Method Used
+## Code Explaination
+### Data Structure
 
-The method used in the code below creating a dictionary with a transactions list, including starting balance, transaction type, amount and description:
+The program maintains a dictionary that stores the user's balance and a list of transactions. Each transaction includes details like type (income/expense), amount, and description:
 ```python
-budget_data = {
-"balance": 500,
-"transactions": [
-{"type": "income", "amount": 1000, "description": "Salary"},
-{"type": "expense", "amount": 500, "description": "Groceries"}
-]
-}
+transactions_database = {"balance": 0, "transactions": []}
 ```
 Each transaction will be stored separately in a new line *(see example below)*:<br>
 ```{"type": "expense", "amount": 500, "description": "Groceries"}```<br><br>
 The user's balance value will be overrited in the main ```budget_manager.py``` file after each transaction.
 
 ### Main Menu
-The menu contains loop with match-cases, the user will be asked to press **Enter** in order to return to the menu again after the function completion.
+The main menu operates within a loop and uses a match-case structure for handling user choices. After executing a function, the program waits for the user to press Enter to return to the main menu.
 
 **1.** Add Income<br>
 **2.** Add Expense<br>
@@ -41,25 +35,31 @@ The menu contains loop with match-cases, the user will be asked to press **Enter
 **4.** Show Transaction History<br>
 **5.** Exit<br><br>
 Enter menu option:<br><br>
-In case the user's input is incorrect or not exists in the menu - error message will be printed.
+If an invalid option is entered, an error message is displayed.
 ### Functions File
 There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
 
+###Functionality Breakdown
+All main functionalities are housed in the transactions.py file, which contains:
+-The menu handler
+-Functions for handling transactions
+-Display functions for balance and transaction history<br>
+This separation makes the code modular and easier to maintain.
 
-## Files Included
+## Project Files
 
 [```budget_manager.py```](https://github.com/desmondcoacher/budget_manager/blob/main/budget_manager.py) *(Main File)*
 
 [```transactions.py```](https://github.com/desmondcoacher/budget_manager/blob/main/transactions.py) *(Functions File)*
 
 
-## Licensing
+## License
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/desmondcoacher/budget_manager/blob/main/LICENSE)
 
 
 
-## Authors
+## Author
 
 - [@desmondcoacher](https://github.com/desmondcoacher)
 
