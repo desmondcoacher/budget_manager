@@ -36,14 +36,22 @@ The main menu operates within a loop and uses a match-case structure for handlin
 **5.** Exit<br><br>
 Enter menu option:<br><br>
 If an invalid option is entered, an error message is displayed.
+
 ### Functions File
-There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
+There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well:
+
+- ```menu_handler()``` - Menu Handler
+- ```add_income(transactions_database: dict)``` - Add Income Operation
+- ```add_expense(transactions_database)``` - Add Expense Operation
+- ```show_balance(transactions_database)``` - Show Balance Operation
+- ```show_transaction_history(transactions_database: list)``` - Add Income Operation
 
 ### Functionality Breakdown
 All main functionalities are housed in the transactions.py file, which contains:
 - The menu handler
 - Functions for handling transactions
 - Display functions for balance and transaction history<br>
+
 This separation makes the code modular and easier to maintain.
 
 ## Project Files
