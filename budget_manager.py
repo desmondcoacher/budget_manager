@@ -11,19 +11,18 @@ while True: # Loop Menu Start
     match userChoise:   # Menu Options Start
 
         case "1":   # Add Income
-            transactions.add_income(transactions_database)
+            transactions.add_income(transactions_database)  # Calling defined function from transactions imported module
 
 
-        # case "2":   # Add Expense
-        # transactions.add_expense(amount, description)   # Calling defined function from transactions imported module
-        #     pass
+        case "2":   # Add Expense
+            transactions.add_expense(transactions_database)   # Calling defined function from transactions imported module
 
         case "3":   # Show Balance
             transactions.show_balance(transactions_database)   # Calling defined function from transactions imported module
             pass
 
         case "4":   # Show Transaction History
-            transactions.show_transaction_history(transactions_database)
+            transactions.show_transaction_history(transactions_database)    # Calling defined function from transactions imported module
             
         case "5":   # Exit
             print("Thank you for using our service. See you later!\n")   # Print goodbye message before quit
