@@ -39,7 +39,7 @@ If an invalid option is entered, an error message is displayed.
 ### Functions File
 There is ```transactions.py``` file with all menu match cases functions which including most of code. The menu handler exists in the file as well.
 
-###Functionality Breakdown
+### Functionality Breakdown
 All main functionalities are housed in the transactions.py file, which contains:
 -The menu handler
 -Functions for handling transactions
