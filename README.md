@@ -9,10 +9,10 @@ Manage your budget easily by adding income/expense transactions.
 
 ## Features
 
--Track income and expenses effortlessly
--View real-time balance updates
--Maintain a transaction history
--Simple and well-commented code for easy understanding
+- Track income and expenses effortlessly
+- View real-time balance updates
+- Maintain a transaction history
+- Simple and well-commented code for easy understanding
 
 
 ## Code Explaination
@@ -41,9 +41,9 @@ There is ```transactions.py``` file with all menu match cases functions which in
 
 ### Functionality Breakdown
 All main functionalities are housed in the transactions.py file, which contains:
--The menu handler
--Functions for handling transactions
--Display functions for balance and transaction history<br>
+- The menu handler
+- Functions for handling transactions
+- Display functions for balance and transaction history<br>
 This separation makes the code modular and easier to maintain.
 
 ## Project Files
